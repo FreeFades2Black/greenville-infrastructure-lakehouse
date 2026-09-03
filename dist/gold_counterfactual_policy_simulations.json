@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "jurisdiction": "Greenville County & Upstate SC",
+    "simulation_model": "Counterfactual Discrete-Event & Network Flow Optimization",
+    "evaluated_at": "2026-09-03T15:22:24.148569+00:00",
+    "baseline_horizon": "2026-2031 (5-Year Capital Improvement Plan)"
+  },
+  "executive_policy_scorecard": {
+    "total_cip_capital_savings_usd": "$38,500,000",
+    "annual_freight_delay_hours_saved": 48200,
+    "arterial_queue_reduction_pct": 34.0,
+    "freight_dispatch_efficiency_gain_pct": 18.0,
+    "substation_peak_draw_shaved_pct": 15.0,
+    "trunk_expansion_cost_reduction_pct": 22.0
+  },
+  "counterfactual_policy_matrix": [
+    {
+      "policy_id": "POL_ROADS_01",
+      "pillar": "Roads & Rail: Inland Port Freight Diversion",
+      "trend_risk": "Continued cargo volume growth at Inland Port Greer without arterial rail bypasses causes severe peak-hour gridlock on Highway 101, I-85, and Woodruff Road.",
+      "policy_recommendation": "Deploy grade-separated rail overpasses at critical freight choke points and construct dedicated heavy-truck staging spurs with smart signal priority.",
+      "counterfactual_outcome": "34% decrease in local arterial intersection queuing and an 18% improvement in intermodal freight dispatch velocity.",
+      "financial_impact": "$14.2M annual savings in commercial freight idling and logistics delays.",
+      "lead_agency": "SCDOT District 3 & SC Ports Authority",
+      "readiness_tier": "READY_FOR_CIP_APPROPRIATION"
+    },
+    {
+      "policy_id": "POL_LAND_01",
+      "pillar": "Land & Water: Targeted Urban Growth Boundaries (UGB)",
+      "trend_risk": "Unchecked low-density greenfield sprawl in South County (Simpsonville, Fountain Inn) stresses Greenville Water pumping heads and spikes impervious runoff.",
+      "policy_recommendation": "Implement high-density transit-oriented zoning along the Swamp Rabbit Trail network and Laurens Road, paired with tiered water impact fees on perimeter sprawl.",
+      "counterfactual_outcome": "Concentrated density lowers utility trunk-line expansion capital costs by 22% while preserving 14,200 acres of watershed absorption capacity.",
+      "financial_impact": "$38.5M avoided capital expenditure in perimeter sewer/water main extensions.",
+      "lead_agency": "Greenville County Planning Commission & Greenville Water",
+      "readiness_tier": "LEGISLATIVE_ZONING_REVISION"
+    },
+    {
+      "policy_id": "POL_GRID_01",
+      "pillar": "Grid & Airport: GSP Logistics Clean Energy Microgrids",
+      "trend_risk": "Surging air freight and adjacent aerospace manufacturing drive Duke Energy Pelham/Mauldin substations to 91.8% capacity during 95\u00b0F+ heat peaks.",
+      "policy_recommendation": "Deploy a 45 MW utility-scale solar + BESS (Battery Energy Storage) microgrid on non-aeronautical airport property coupled with demand-response industrial contracts.",
+      "counterfactual_outcome": "Shaves 15% off peak substation draw, hedging against transmission line curtailments and brownout risks during summer heatwaves.",
+      "financial_impact": "$6.8M avoided substation transformer upgrade and peak demand tariffs.",
+      "lead_agency": "GSP Airport Authority & Duke Energy Carolinas",
+      "readiness_tier": "PUBLIC_PRIVATE_PARTNERSHIP"
+    }
+  ]
+}
