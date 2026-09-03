@@ -32,9 +32,8 @@ class GreenvilleInfrastructureLakehousePipeline:
         print("=" * 80)
 
         # 1. Ingestion
-        print("\n[STEP 1/4] Ingesting Municipal, State (SCDOT/RFA) & Federal (USGS/EIA/FRA/Census) Feeds...")
-        raw_csv = self.streamer.generate_historical_telemetry(weeks=52)
-        bronze_json = self.streamer.ingest_to_bronze(raw_csv)
+        print("\n[STEP 1/4] Ingesting REAL USGS Water, SCDOT Traffic, SC Ports, and Census Feeds...")
+        bronze_json = self.streamer.ingest_real_cross_domain_telemetry()
         silver_mart = self.streamer.build_silver_mart(bronze_json)
 
         # 2. Diagnostics

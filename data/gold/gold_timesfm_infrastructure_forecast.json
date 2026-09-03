@@ -4,7 +4,7 @@
     "architecture": "Decoder-Only Autoregressive Transformer with Zero-Shot Cross-Patch Context",
     "context_window_timepoints": 512,
     "forecast_horizon_weeks": 52,
-    "generated_at": "2026-09-03T15:22:25.690731+00:00",
+    "generated_at": "2026-09-03T15:48:10.025035+00:00",
     "mean_absolute_percentage_error_mape": 2.14,
     "confidence_calibration": "Calibrated 10th/50th/90th Percentile Empirical Ensembles"
   },

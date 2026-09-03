@@ -36,10 +36,9 @@ def test_models_and_node_specifications():
 
 
 def test_municipal_feed_ingestion_and_silver_mart():
-    """Verify municipal telemetry generation, Bronze Delta ingestion, and Silver Mart creation."""
+    """Verify real municipal telemetry ingestion, Bronze Delta ingestion, and Silver Mart creation."""
     streamer = GreenvilleMunicipalStreamer()
-    raw_csv = streamer.generate_historical_telemetry(weeks=12)
-    bronze_path = streamer.ingest_to_bronze(raw_csv)
+    bronze_path = streamer.ingest_real_cross_domain_telemetry()
     silver_path = streamer.build_silver_mart(bronze_path)
 
     assert bronze_path.exists()

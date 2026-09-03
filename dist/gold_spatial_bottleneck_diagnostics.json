@@ -2,7 +2,7 @@
   "metadata": {
     "jurisdiction": "Greenville County, SC",
     "analytics_engine": "Databricks PySpark Spatial Cross-Correlation",
-    "evaluated_at": "2026-09-03T15:22:24.145048+00:00",
+    "evaluated_at": "2026-09-03T15:48:10.025035+00:00",
     "spatial_resolution": "Traffic Analysis Zone (TAZ) & Census Block Group",
     "version": "3.2.0"
   },
