@@ -1,0 +1,17 @@
+services:
+  greenville-lakehouse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: freefades2black/greenville-infrastructure-lakehouse:latest
+    container_name: greenville-infrastructure-lakehouse
+    restart: unless-stopped
+    ports:
+      - "8810:8810"
+    environment:
+      - PORT=8810
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:8810/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
