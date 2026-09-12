@@ -1,0 +1,70 @@
+{
+  "title": "Greenville Municipal Civil Infrastructure Observability",
+  "schemaVersion": 38,
+  "panels": [
+    {
+      "title": "Municipal GIS Records Ingested / min",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "rate(greenville_records_ingested_total[5m]) * 60",
+          "legendFormat": "Records / min"
+        }
+      ]
+    },
+    {
+      "title": "Stormwater Culvert Risk Index (High Risk)",
+      "type": "stat",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "sum(greenville_high_risk_culverts)",
+          "legendFormat": "Critical Culverts"
+        }
+      ]
+    },
+    {
+      "title": "Spatial Join Query Duration (s)",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "rate(spatial_join_duration_seconds_sum[5m]) / rate(spatial_join_duration_seconds_count[5m])",
+          "legendFormat": "Join Latency (s)"
+        }
+      ]
+    },
+    {
+      "title": "Pavement Degradation Model Accuracy (%)",
+      "type": "gauge",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "avg(timesfm_pavement_forecast_accuracy) * 100",
+          "legendFormat": "% Accuracy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+groups:
+  - name: greenville_infrastructure_alerts
+    rules:
+      - alert: StormwaterCulvertCapacityExceeded
+        expr: greenville_stormwater_capacity_ratio > 0.85
+        for: 10m
+        labels:
+          severity: critical
+          tier: municipal-ops
+        annotations:
+          summary: "Stormwater culvert capacity >85% in basin {{ $labels.basin_id }}"
+          description: "Flash flood risk detected. Dispatch civil engineering inspection team."
+
+      - alert: SpatialJoinLatencyDegraded
+        expr: spatial_join_duration_seconds > 15.0
+        for: 5m
+        labels:
+          severity: warning
+          tier: data-pipeline
+        annotations:
+          summary: "Spatial join execution time degraded > 15s"
+          description: "Potential R-tree spatial index corruption or partition skew."
